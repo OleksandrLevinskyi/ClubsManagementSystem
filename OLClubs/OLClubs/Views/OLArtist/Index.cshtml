@@ -1,0 +1,43 @@
+﻿@model IEnumerable<OLClubs.Models.Artist>
+
+@{
+    ViewData["Title"] = "List of Artists";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NameAddress.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumHourlyRate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameAddress.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinimumHourlyRate)
+            </td>
+            <td>
+                <a asp-controller="OLGroupMember" asp-action="Index"
+                   asp-route-artistId="@item.ArtistId" asp-route-artistName="@item.NameAddress.FullName">Group Members</a> |
+                <a asp-action="Edit" asp-route-id="@item.ArtistId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ArtistId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ArtistId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

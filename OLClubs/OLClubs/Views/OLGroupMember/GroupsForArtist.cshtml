@@ -1,0 +1,44 @@
+﻿@model IEnumerable<OLClubs.Models.GroupMember>
+@using Microsoft.AspNetCore.Http;
+
+@{
+    ViewData["Title"] = $"Groups with '{Context.Session.GetString("artistName")}'";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ArtistIdGroupNavigation.NameAddress.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateJoined)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateLeft)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArtistIdGroupNavigation.NameAddress.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateJoined)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateLeft)
+            </td>
+            <td>
+                <a asp-action="Index" 
+                   asp-route-artistId="@item.ArtistIdGroup">Go to this group</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

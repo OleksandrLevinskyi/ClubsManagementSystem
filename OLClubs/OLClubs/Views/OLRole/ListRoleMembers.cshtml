@@ -1,0 +1,45 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@model IEnumerable<IdentityUser>
+@{
+    ViewData["Title"] = $"Users In Role '{ViewBag.RoleName}'";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Users not in role:</p>
+<form asp-action="AddToRole" asp-route-roleName="@ViewBag.RoleName">
+    <select name="userName" asp-items="ViewBag.UsersNotInRole"></select>
+    <input type="submit" value="Add to Role" />
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.UserName</td>
+                <td>@item.Email</td>
+                <td>
+                    @if (!(User.Identity.Name == item.UserName && ViewBag.RoleName == "administrators"))
+                    {
+                        <a asp-action="RemoveFromRole"
+                           asp-route-userName="@item.UserName"
+                           asp-route-roleName="@ViewBag.RoleName">Remove</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Index">Return to Role List</a>
+</p>
+

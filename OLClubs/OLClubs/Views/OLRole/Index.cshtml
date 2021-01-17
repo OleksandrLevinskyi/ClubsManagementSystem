@@ -1,0 +1,40 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@model IEnumerable<IdentityRole>
+@{
+    ViewData["Title"] = "Roles on File";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="CreateRole">
+    <input type="text" name="roleName" />
+    <input type="submit" value="Add Role" />
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Normilized</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.NormalizedName</td>
+                <td>
+                    <a asp-action="ListRoleMembers" asp-route-roleName="@item.Name">Manage Users</a>
+                    @if (item.Name != "administrators")
+                    {
+                        <span> | </span><a asp-action="DeleteRole" asp-route-roleName="@item.Name">Delete Role</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

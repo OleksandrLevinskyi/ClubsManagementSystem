@@ -1,0 +1,9 @@
+C:\Users\User\Desktop\Level 3\PROG2230 Microsoft Web Technologies\Assignments\Assignment4_Oleksandr_Levinskyi\OLClubs\OLClassLibrary\bin\Debug\netcoreapp3.1\OLClassLibrary.deps.json
+C:\Users\User\Desktop\Level 3\PROG2230 Microsoft Web Technologies\Assignments\Assignment4_Oleksandr_Levinskyi\OLClubs\OLClassLibrary\bin\Debug\netcoreapp3.1\OLClassLibrary.dll
+C:\Users\User\Desktop\Level 3\PROG2230 Microsoft Web Technologies\Assignments\Assignment4_Oleksandr_Levinskyi\OLClubs\OLClassLibrary\bin\Debug\netcoreapp3.1\OLClassLibrary.pdb
+C:\Users\User\Desktop\Level 3\PROG2230 Microsoft Web Technologies\Assignments\Assignment4_Oleksandr_Levinskyi\OLClubs\OLClassLibrary\obj\Debug\netcoreapp3.1\OLClassLibrary.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Level 3\PROG2230 Microsoft Web Technologies\Assignments\Assignment4_Oleksandr_Levinskyi\OLClubs\OLClassLibrary\obj\Debug\netcoreapp3.1\OLClassLibrary.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Level 3\PROG2230 Microsoft Web Technologies\Assignments\Assignment4_Oleksandr_Levinskyi\OLClubs\OLClassLibrary\obj\Debug\netcoreapp3.1\OLClassLibrary.AssemblyInfo.cs
+C:\Users\User\Desktop\Level 3\PROG2230 Microsoft Web Technologies\Assignments\Assignment4_Oleksandr_Levinskyi\OLClubs\OLClassLibrary\obj\Debug\netcoreapp3.1\OLClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Level 3\PROG2230 Microsoft Web Technologies\Assignments\Assignment4_Oleksandr_Levinskyi\OLClubs\OLClassLibrary\obj\Debug\netcoreapp3.1\OLClassLibrary.dll
+C:\Users\User\Desktop\Level 3\PROG2230 Microsoft Web Technologies\Assignments\Assignment4_Oleksandr_Levinskyi\OLClubs\OLClassLibrary\obj\Debug\netcoreapp3.1\OLClassLibrary.pdb

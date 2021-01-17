@@ -1,0 +1,37 @@
+﻿@model OLClubs.Models.GroupMember
+@using Microsoft.AspNetCore.Http;
+
+@{
+    ViewData["Title"] = $"Member Details from '{Context.Session.GetString("artistName")}'";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>GroupMember</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ArtistIdMemberNavigation.NameAddress.FullName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ArtistIdMemberNavigation.NameAddress.FullName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateJoined)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateJoined)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateLeft)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateLeft)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ArtistIdMember">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
